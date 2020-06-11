@@ -3,6 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'elements.dart';
 import 'description.dart';
+import 'videos.dart';
+import 'featured.dart';
+import 'trailers.dart';
 
 void main() {
   runApp(MyApp());
@@ -130,7 +133,9 @@ class _HomeScreenState extends State<HomeScreen> {
                       Padding(
                         padding:EdgeInsets.only(right:20,bottom:5,top:5) ,
                         child:InkWell(
-                          onTap:(){},
+                          onTap:(){
+                            Navigator.of(context).push(MaterialPageRoute(builder: (context)=>Videos()));
+                          },
                           child: Chip(
                           label: Text(
                           'All Videos',
@@ -143,7 +148,10 @@ class _HomeScreenState extends State<HomeScreen> {
                       Padding(
                         padding:EdgeInsets.only(right:20,bottom:5,top:5) ,
                         child:InkWell(
-                          onTap:(){},
+                          onTap:(){
+                            Navigator.of(context).push(MaterialPageRoute(builder: (context)=>trailer()));
+
+                          },
                           child: Chip(
                           label: Text(
                           'Trailers',
@@ -156,7 +164,9 @@ class _HomeScreenState extends State<HomeScreen> {
                       Padding(
                         padding:EdgeInsets.only(right:20,bottom:5,top:5) ,
                         child:InkWell(
-                          onTap:(){},
+                          onTap:(){
+                            Navigator.of(context).push(MaterialPageRoute(builder: (context)=>featured()));
+                          },
                           child: Chip(
                           label: Text(
                           'Featured Videos',

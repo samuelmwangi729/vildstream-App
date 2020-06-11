@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'main.dart';
+import 'videos.dart';
+import 'featured.dart';
+import 'trailers.dart';
+import 'login.dart';
 class DrawerElements extends StatelessWidget {
   int i=0;
   @override
@@ -54,11 +58,16 @@ class DrawerElements extends StatelessWidget {
             // },));
           },
           child: Center(
-            child: ListTile(
-                  title: Text('Featured Videos',style:TextStyle(fontFamily:'Times New Roman',fontWeight: FontWeight.bold)),
-                  leading: Icon(Icons.video_call,color: Colors.red),
-                  dense: true,
-                ),
+            child: InkWell(
+              onTap: (){
+                Navigator.of(context).push(MaterialPageRoute(builder: (context)=>featured()));
+              },
+                          child: ListTile(
+                    title: Text('Featured Videos',style:TextStyle(fontFamily:'Times New Roman',fontWeight: FontWeight.bold)),
+                    leading: Icon(Icons.video_call,color: Colors.red),
+                    dense: true,
+                  ),
+            ),
           ),
         ),
         Divider(
@@ -66,7 +75,9 @@ class DrawerElements extends StatelessWidget {
           color: Colors.red
         ),
          new InkWell(
-          onTap:(){},
+          onTap:(){
+             Navigator.of(context).push(MaterialPageRoute(builder: (context)=>trailer()));
+          },
           child: Center(
             child: ListTile(
                   title: Text('Trailers',style:TextStyle(fontFamily:'Times New Roman',fontWeight: FontWeight.bold)),
@@ -89,6 +100,22 @@ class DrawerElements extends StatelessWidget {
                  alignment: Alignment.centerLeft,
                  fit: BoxFit.fitHeight,
                  ),
+                  dense: true,
+                ),
+          ),
+        ),
+         Divider(
+          height: 1,
+          color: Colors.red
+        ),
+         new InkWell(
+          onTap:(){
+            Navigator.of(context).push(MaterialPageRoute(builder: (context)=>login()));
+          },
+          child: Center(
+            child: ListTile(
+                  title: Text('My Account',style:TextStyle(fontFamily:'Times New Roman',fontWeight: FontWeight.bold)),
+                  leading:  Icon(Icons.person,color: Colors.red),
                   dense: true,
                 ),
           ),
