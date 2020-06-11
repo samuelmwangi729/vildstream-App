@@ -2,6 +2,7 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'elements.dart';
+import 'description.dart';
 
 void main() {
   runApp(MyApp());
@@ -16,10 +17,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'VildStream',
       debugShowCheckedModeBanner: false,
-      color: Colors.pink,
+      color: Colors.red,
       theme: ThemeData(
         scaffoldBackgroundColor: Colors.white,
-        primarySwatch: Colors.pink,
+        primarySwatch: Colors.red,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       home: HomeScreen(),
@@ -260,9 +261,18 @@ class  MyClipper extends CustomClipper<Path>{
   }
 }
 
-Widget CategoryCard(String path,String title){
-  return InkWell(
-    onTap:(){},
+class CategoryCard extends StatelessWidget {
+  final String path;
+  final String title;
+  CategoryCard(this.path,this.title);
+  @override
+  Widget build(BuildContext context) {
+    return InkWell(
+    onTap:(){
+       Navigator.of(context).push(MaterialPageRoute(builder: (context){
+         return Description(this.title,this.path);
+       }));
+    },
     child:Column(
       children: <Widget>[
       Card(elevation: .7,
@@ -285,4 +295,6 @@ Widget CategoryCard(String path,String title){
     ],
     )
   );
+     
+  }
 }

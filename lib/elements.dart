@@ -55,8 +55,8 @@ class DrawerElements extends StatelessWidget {
           },
           child: Center(
             child: ListTile(
-                  title: Text('Categories',style:TextStyle(fontFamily:'Times New Roman',fontWeight: FontWeight.bold)),
-                  leading: Icon(Icons.list,color: Colors.red),
+                  title: Text('Featured Videos',style:TextStyle(fontFamily:'Times New Roman',fontWeight: FontWeight.bold)),
+                  leading: Icon(Icons.video_call,color: Colors.red),
                   dense: true,
                 ),
           ),
@@ -69,12 +69,8 @@ class DrawerElements extends StatelessWidget {
           onTap:(){},
           child: Center(
             child: ListTile(
-                  title: Text('Properties /Property Type',style:TextStyle(fontFamily:'Times New Roman',fontWeight: FontWeight.bold)),
-                  leading:  SvgPicture.asset('assets/house.svg',
-                 width: 25,
-                 alignment: Alignment.centerLeft,
-                 fit: BoxFit.fitHeight,
-                 ),
+                  title: Text('Trailers',style:TextStyle(fontFamily:'Times New Roman',fontWeight: FontWeight.bold)),
+                  leading: Icon(Icons.train,color: Colors.red),
                   dense: true,
                 ),
           ),
@@ -87,44 +83,12 @@ class DrawerElements extends StatelessWidget {
           onTap:(){},
           child: Center(
             child: ListTile(
-                  title: Text('Listing',style:TextStyle(fontFamily:'Times New Roman',fontWeight: FontWeight.bold)),
+                  title: Text('My Categories',style:TextStyle(fontFamily:'Times New Roman',fontWeight: FontWeight.bold)),
                   leading:  SvgPicture.asset('assets/menu.svg',
                  width: 25,
                  alignment: Alignment.centerLeft,
                  fit: BoxFit.fitHeight,
                  ),
-                  dense: true,
-                ),
-          ),
-        ),
-        Divider(
-          height: 1,
-          color: Colors.red
-        ),
-         new InkWell(
-          onTap:(){},
-          child: Center(
-            child: ListTile(
-                  title: Text('Blog',style:TextStyle(fontFamily:'Times New Roman',fontWeight: FontWeight.bold)),
-                   leading:  SvgPicture.asset('assets/location1.svg',
-                 width: 25,
-                 alignment: Alignment.centerLeft,
-                 fit: BoxFit.fitHeight,
-                 ),
-                  dense: true,
-                ),
-          ),
-        ),
-       Divider(
-          height: 1,
-          color: Colors.red
-        ),
-         new InkWell(
-          onTap:(){},
-          child: Center(
-            child: ListTile(
-                  title: Text('Contact Us',style:TextStyle(fontFamily:'Times New Roman',fontWeight: FontWeight.bold)),
-                  leading: Icon(Icons.phone,color: Colors.red),
                   dense: true,
                 ),
           ),
