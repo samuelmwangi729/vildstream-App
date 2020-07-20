@@ -47,7 +47,7 @@ class _getVideo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(8.0),
+      padding: const EdgeInsets.all(4.0),
       child: InkWell(
         onTap: (){
            Navigator.of(context).push(MaterialPageRoute(builder: (context)=> singlevideo(id,poster,title)));

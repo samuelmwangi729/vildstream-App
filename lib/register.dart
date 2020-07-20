@@ -15,14 +15,14 @@ class register extends StatelessWidget {
           ),
         ),
         child: Center(
-          child:Padding(padding: EdgeInsets.all(10),
+          child:Padding(padding: EdgeInsets.only(left: 20,right:20),
           child: Container(
             decoration: BoxDecoration(
               border: Border.all(),
               color: Colors.white.withOpacity(.7),
               borderRadius:BorderRadius.circular(20)
             ),
-            height: 500,
+            height: 390,
             child: Column(
               children: <Widget>[
                 Padding(
@@ -34,7 +34,7 @@ class register extends StatelessWidget {
                               )),
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(top: 10.0),
+                  padding: const EdgeInsets.only(top: 1.0),
                   child: ListTile(
                     leading: Icon(Icons.card_membership),
                     title: TextField(
@@ -45,7 +45,7 @@ class register extends StatelessWidget {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(top: 10.0),
+                  padding: const EdgeInsets.only(top: 1.0),
                   child: ListTile(
                     leading: Icon(Icons.email),
                     title: TextField(
@@ -57,7 +57,7 @@ class register extends StatelessWidget {
                 ),
                 SizedBox(height: 1),
                 Padding(
-                  padding: const EdgeInsets.only(top: 10.0),
+                  padding: const EdgeInsets.only(top: 1.0),
                   child: ListTile(
                     leading: Icon(Icons.lock),
                     title: TextField(
@@ -70,7 +70,7 @@ class register extends StatelessWidget {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(top: 10.0),
+                  padding: const EdgeInsets.only(top: 1.0),
                   child: ListTile(
                     leading: Icon(Icons.lock),
                     title: TextField(
@@ -84,7 +84,7 @@ class register extends StatelessWidget {
                 ),
                 
                 Padding(
-                  padding: const EdgeInsets.all(28.0),
+                  padding: const EdgeInsets.only(left: 28.0,right:28),
                   child: InkWell(
                       child: Center(
                         child: Material(

@@ -8,7 +8,7 @@ class Videos extends StatelessWidget {
      appBar: AppBar(
         title: Text('VildStream Videos',
         style: TextStyle(
-          fontSize: 30
+          fontSize: 20
         )
         ),
         centerTitle: false,

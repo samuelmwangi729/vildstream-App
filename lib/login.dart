@@ -22,7 +22,7 @@ class login extends StatelessWidget {
               color: Colors.white.withOpacity(.7),
               borderRadius:BorderRadius.circular(20)
             ),
-            height: 500,
+            height: 420,
             child: Column(
               children: <Widget>[
                 Padding(
@@ -85,6 +85,36 @@ class login extends StatelessWidget {
                       ),
                   )
                 ),
+                Padding(
+                  padding: const EdgeInsets.all(0),
+                  child: InkWell(
+                    onTap:(){
+                       Navigator.of(context).push(MaterialPageRoute(builder: (context)=>register()));
+                    },
+                      child: Center(
+                        child: Material(
+                          color: Colors.red,
+                          borderRadius: BorderRadius.circular(200),
+                          elevation: .5,
+                           child:ListTile(
+                          leading: Padding(
+                           padding: const EdgeInsets.only(left: 28.0),
+                            child: Icon(Icons.person_add,color: Colors.white),
+                          ),
+                          title: Padding(
+                            padding: const EdgeInsets.only(left: 28.0),
+                            child: Text('Sign Up',style: TextStyle(
+                              fontSize: 15,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white
+                            )
+                            ),
+                          )
+                  )               
+                    ),
+                      ),
+                  )
+                ),
                 Padding(padding: EdgeInsets.only(left:100),
                 child:InkWell(
                     child: Text('Forgot Your Password?',
@@ -95,18 +125,7 @@ class login extends StatelessWidget {
                     ),
                 )
                 ),
-                MaterialButton(
-                  color: Colors.red,
-                  onPressed: (){
-                    Navigator.of(context).push(MaterialPageRoute(builder: (context)=>register()));
-                  },
-                 child: Text('Sign Up',style: TextStyle(
-                              fontSize: 15,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.white
-                            )
-                            ),
-                ),
+                
                 MaterialButton(
                   color: Colors.blue.withOpacity(.4),
                   onPressed: (){

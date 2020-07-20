@@ -13,7 +13,6 @@ void main() {
 
 class MyApp extends StatelessWidget {
   bool isLoggedIn=false;
-
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
@@ -84,15 +83,15 @@ class _HomeScreenState extends State<HomeScreen> {
                       right: 30,
                       child: Text(
                         'VildStream Videos',
-                        style: TextStyle(color: Colors.white,fontSize:40,fontWeight: FontWeight.bold)
+                        style: TextStyle(color: Colors.white,fontSize:30,fontWeight: FontWeight.bold,letterSpacing:2)
                       )
                     ),
                     Positioned(
                        top: 120,
-                      left: 90,
-                      right: 60,
+                      left: 80,
+                      right: 80,
                       child: Text('Subscription Based Video Streaming Website',
-                      style:TextStyle(color: Colors.white)
+                      style:TextStyle(color: Colors.white,backgroundColor:Colors.black.withOpacity(.5),letterSpacing:2)
                       )
                       )
                     ]
