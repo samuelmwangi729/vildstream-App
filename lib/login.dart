@@ -1,142 +1,135 @@
 import 'package:flutter/material.dart';
-import 'register.dart';
+
 class login extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.red.withOpacity(1),
       body:Container(
+        padding: EdgeInsets.symmetric(vertical: 30),
+        width: MediaQuery.of(context).size.width,
         decoration: BoxDecoration(
-          gradient: LinearGradient(
-            colors: [
-              Colors.black,
-              Colors.red,
+          gradient:LinearGradient(
+            begin: Alignment.topCenter,
+            colors:[
+              Colors.red[900],
+              Colors.orange[700],
+              Colors.orange[400],
             ]
-          ),
+          )
         ),
-        child: Center(
-          child:Padding(padding: EdgeInsets.all(10),
-          child: Container(
-            decoration: BoxDecoration(
-              border: Border.all(),
-              color: Colors.white.withOpacity(.7),
-              borderRadius:BorderRadius.circular(20)
+        child:Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            SizedBox(height: 30,),
+            Padding(
+              padding: EdgeInsets.all(30),
+              child:Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  Text('Login to Vildstream',style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 30
+                    ),
+                  ),
+                  SizedBox(height:20),
+                  Text(
+                    'Welcome Back',
+                    style: TextStyle(color:Colors.white)
+                  )
+                ]
+              )
             ),
-            height: 420,
-            child: Column(
-              children: <Widget>[
-                Padding(
-                  padding: const EdgeInsets.all(1.0),
-                  child: Text('Login your VildStream Account',style: TextStyle(
-                                fontSize: 20,
-                                fontWeight: FontWeight.bold,
-                                color: Colors.black
-                              )),
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(top: 20.0),
-                  child: ListTile(
-                    leading: Icon(Icons.email),
-                    title: TextField(
-                      decoration: InputDecoration(
-                        hintText: 'Your Email Address'
-                      )
+            Expanded(
+              child: Container(
+               decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(50)
                     )
-                  ),
-                ),
-                SizedBox(height: 10),
-                Padding(
-                  padding: const EdgeInsets.only(top: 20.0),
-                  child: ListTile(
-                    leading: Icon(Icons.lock),
-                    title: TextField(
-                       obscureText: true,
-                      decoration: InputDecoration(
-                        hintText: 'Your Password'
-                      )
-                     
-                    )
-                  ),
-                ),
-                SizedBox(height: 10,),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: InkWell(
-                      child: Center(
-                        child: Material(
-                          color: Colors.black,
-                          borderRadius: BorderRadius.circular(200),
-                          elevation: .5,
-                           child:ListTile(
-                          leading: Padding(
-                           padding: const EdgeInsets.only(left: 28.0),
-                            child: Icon(Icons.keyboard_arrow_right,color: Colors.white),
-                          ),
-                          title: Padding(
-                            padding: const EdgeInsets.only(left: 28.0),
-                            child: Text('Sign In',style: TextStyle(
-                              fontSize: 20,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.white
-                            )),
-                          )
-                  )               
-                    ),
-                      ),
-                  )
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(0),
-                  child: InkWell(
-                    onTap:(){
-                       Navigator.of(context).push(MaterialPageRoute(builder: (context)=>register()));
-                    },
-                      child: Center(
-                        child: Material(
-                          color: Colors.red,
-                          borderRadius: BorderRadius.circular(200),
-                          elevation: .5,
-                           child:ListTile(
-                          leading: Padding(
-                           padding: const EdgeInsets.only(left: 28.0),
-                            child: Icon(Icons.person_add,color: Colors.white),
-                          ),
-                          title: Padding(
-                            padding: const EdgeInsets.only(left: 28.0),
-                            child: Text('Sign Up',style: TextStyle(
-                              fontSize: 15,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.white
-                            )
+               ),
+               child:Padding(
+                 padding:EdgeInsets.all(20),
+                 child: Column(
+                   children: <Widget>[
+                     SizedBox(height: 20,),
+                     Container(
+                       decoration: BoxDecoration(
+                         color: Colors.white,
+                         borderRadius: BorderRadius.circular(30),
+                         boxShadow: [
+                           BoxShadow(
+                             color: Color.fromRGBO(100,200, 50, .3)
+                           )
+                         ]
+                       ),
+                       child: Column(
+                         children: <Widget>[
+                           Container(
+                             decoration: BoxDecoration(
+                               border: Border(bottom: BorderSide(color: Colors.blue))
+                             ),
+                             child: TextField(
+                               keyboardType: TextInputType.emailAddress,
+                               decoration: InputDecoration(
+                                 hintText: "Email Address",
+                                 hintStyle: TextStyle(
+                                   color: Colors.black,
+                                 )
+                               )
+                             ),
+                           ),
+                           Container(
+                             decoration: BoxDecoration(
+                               border: Border(bottom: BorderSide(color: Colors.blue))
+                             ),
+                             child: TextField(
+                               keyboardType: TextInputType.emailAddress,
+                               obscureText: true,
+                               decoration: InputDecoration(
+                                 hintText: "Password",
+                                 hintStyle: TextStyle(
+                                   color: Colors.black
+                                 )
+                               )
+                             ),
+                           ),
+                           Padding(
+                             padding: const EdgeInsets.all(8.0),
+                             child: MaterialButton(onPressed: (){},
+                             textTheme: ButtonTextTheme.primary,
+                             color: Colors.red,
+                             minWidth: MediaQuery.of(context).size.width,
+                             child: Text('Login'),
+                             ),
+                           ),
+                            Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: MaterialButton(onPressed: (){},
+                           textTheme: ButtonTextTheme.primary,
+                           color: Colors.blue,
+                           minWidth: MediaQuery.of(context).size.width,
+                           child: Text('Login with Facebook'),
+                           ),
                             ),
-                          )
-                  )               
-                    ),
-                      ),
-                  )
-                ),
-                Padding(padding: EdgeInsets.only(left:100),
-                child:InkWell(
-                    child: Text('Forgot Your Password?',
-                    style: TextStyle(
-                      decoration: TextDecoration.underline,
-                      color: Colors.blue,
-                    )
-                    ),
-                )
-                ),
-                
-                MaterialButton(
-                  color: Colors.blue.withOpacity(.4),
-                  onPressed: (){
-                    Navigator.pop(context);
-                  },
-                  child: Text('Back'),
-                ),
-            ],)
-          )
-          )
-        ),
+                            Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: MaterialButton(onPressed: (){},
+                           textTheme: ButtonTextTheme.primary,
+                           color: Colors.red,
+                           minWidth: MediaQuery.of(context).size.width,
+                           child: Text('Login with Google'),
+                           ),
+                            )
+                         ],
+                       )
+                     )
+                   ],
+                 )
+               )
+              )
+            )
+          ],
+        )
       )
     );
   }

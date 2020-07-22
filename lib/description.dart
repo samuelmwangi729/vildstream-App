@@ -5,7 +5,7 @@ Widget Description(title,path){
     appBar: AppBar(
         title: Text(title+' Videos',
         style: TextStyle(
-          fontSize: 20
+          fontSize: 17
         )
         ),
         centerTitle: true,
@@ -37,18 +37,20 @@ Widget Description(title,path){
                       height: 300,
                       fit: BoxFit.cover
                       ),
-                    Positioned(
-                      top: 70,
-                      left: 30,
-                      right: 30,
-                      child: Text(
-                        title+' Category',
-                        style: TextStyle(
-                          color: Colors.white,fontSize:40,
-                          fontWeight: FontWeight.bold,
-                          backgroundColor: Colors.black12.withOpacity(.4)
-                          )
-                      )
+                    Center(
+                      child: Positioned(
+                        top: 70,
+                        left: 10,
+                        right: 10,
+                        child: Text(
+                          title+' Category',
+                          style: TextStyle(
+                            color: Colors.white,fontSize:30,
+                            fontWeight: FontWeight.bold,
+                            backgroundColor: Colors.black12.withOpacity(.4)
+                            )
+                        )
+                      ),
                     ),
                     ]
                   ))
